@@ -3,6 +3,12 @@ body {
   color: #3b3a3a;
 }
 
+p {
+	line-height: 1.3em;
+}
+
+.mobile {display: none;}
+
 .container {
   width: 800px;
   margin: 40px auto;
@@ -63,7 +69,9 @@ h2 {
 }
 
 .sp-border {
-  border: .5px solid #aaa;
+  border:none;
+  border-top: .5px solid #aaa;
+  height: 1px;
   margin: 2px 0;
 }
 
@@ -84,10 +92,15 @@ h2 {
 
 .social li {
   list-style-type: none;
-  margin: 8px;
+  margin: 14px;
 }
 
 .social li span {font-weight: bold}
+
+footer {
+  border-top: .5px solid #aaa;
+  margin-top: 3em;
+}
 
 @media screen and (max-width:900px) {
   .container {
@@ -104,5 +117,34 @@ h2 {
     box-shadow: none;
     border: none;
     border-radius: 0;
+  }
+  .mobile {display: block;}
+
+  .social li {
+    margin: 0;
+    width: 100%;
+    border-top: .5px solid #aaa;
+    position: relative;
+  }
+
+  .social li a::after {
+    content: '>';
+    position: absolute;
+    right: 20px;
+  }
+
+  footer {
+    border: none;
+  }
+
+  .social li:last-child {
+    border-bottom: .5px solid #aaa;
+  }
+  .social li a {
+    display: block;
+    text-decoration: none;
+    line-height: 44px;
+    padding-left: 20px;
+    text-align: left;
   }
 }
